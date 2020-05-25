@@ -1,0 +1,20 @@
+Let me preface this with an apology to whoever has to work with this code. It has been a number of years since I wrote this. 
+There are a lot of ugly hacks from programming inexperience that aren't easy to work with.
+
+The code as a whole is run from main.py
+Here a number of experiments are repeated. Each "experiment" corresponds to an agent type. 
+The order is typically:
+1. The agent that is shaped with the "True" amdp
+2 - 7. The uniformly partitioned amdps with varying granularity.
+8. Vanilla - no shaping.
+
+These are provided by the agent's abstraction function which returns a list of state abstractions. 
+
+Once all of the experiments have been repeated the specifed number of times, the main.py will finish up by constructing the appropriate figures and saving them.
+In hindsight, the results should instead be written to file and a separate python script should plot the results, but this is an easy fix.
+
+
+There are a number of environments available, the "true" abstraction differs for each and unfortunately the correc
+block needs uncommenting in the agent's abstraction function. For the "big" enviornment, the standard environment's abstraction is used
+but the block of code from lines 112-120 need to be uncommented to stretch the environment out. Additionally for the Big Environment the room sizes also need changing. 
+
